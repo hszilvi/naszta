@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +47,39 @@
             </ul>
         </nav>
     </header>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="socials-block">
+            <div class="linkedin social-logo"><img src="./assets/images/linkedinggrey.png" alt=""></div>
+            <div class="github social-logo"><img src="./assets/images/github-icon-png-8-transparent.png"></div>
+            <div class="stack social-logo"><img src="./assets/images/stackoverflow-48.png" alt=""></div>
+        </div>
+        <div class="contact-form">
+            <form class="form-container">
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="John Doe">
+                <p class="error hide">Please give your name!</p>
+
+                <label>Email:</label>
+                <input type="text" id="email" placeholder="john@doe.com">
+                <p class="error hide">Please add a valid email!</p>
+
+                <label>Message:</label>
+                <textarea id="subject" placeholder="Hi,..."></textarea>
+                <p class="error hide">Please type your message!</p>
+
+                <input id="submit-btn" type="submit" value="Send">
+
+            </form>
+        </div>
+        <div class="copy">&copy;2024 Ferenc Nasztanovics
+
+        </div>
+    </footer>
+
 
 <script src="./assets/js/script.js"></script>
 </body>
