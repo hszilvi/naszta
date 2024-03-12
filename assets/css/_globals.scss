@@ -14,4 +14,22 @@ body {
     max-width: 90em;
     border: 2px solid red;
     color: $main-font-white;
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    // font-variation-settings:
+    //   "wdth" 100;
+    height: 100vh;
+
+}
+.hide-for-desktop {
+    @include breakpoint-up('medium') {
+        display: none;
+    }
+}
+.hide-for-mobile {
+    @include breakpoint-down('medium') {
+        display: none;
+    }
 }
