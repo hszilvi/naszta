@@ -184,6 +184,11 @@ footer .contact-form .form-container label {
 footer .contact-form .form-container #name, footer .contact-form .form-container #email {
   height: 3em;
 }
+footer .contact-form .form-container #subject {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 4em;
+}
 footer .contact-form .form-container .error {
   margin: 0;
   color: red;
