@@ -204,4 +204,5 @@ footer .contact-form .form-container #submit-btn {
 footer .copy {
   grid-area: copy;
   justify-self: center;
+  margin-top: 3em;
 }/*# sourceMappingURL=index.css.map */
