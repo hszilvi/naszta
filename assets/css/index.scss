@@ -9,6 +9,11 @@
 //     font-variation-settings:
 //       "wdth" 100;
 //   }
+@import "variables";
+@import "mixins";
 @import "globals";
+
 @import "header";
+
+@import "footer";
 

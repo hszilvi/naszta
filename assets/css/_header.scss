@@ -1,7 +1,90 @@
 header {
+    height: 3em;
+    background-color: $light-gray;
     .head-nav {
-        .nav-element {
-            text-decoration: none;
+        float: right;
+        margin-top: .5em;       
+        .nav-all-element {
+            list-style: none;
+            color: $main-font-white;
+            background-color: $main-color;
+            margin-top: 3em;
+            padding: 0;
+            display: none;
+            // visibility: hidden;
+            .nav-element {
+                text-decoration: none;
+                padding-top: 0.5em;
+                padding-bottom: 1em;
+                &:hover {
+                    background-color: $lighter-gray;
+
+                }
+                .nav-link {
+                    color: $main-font-white;
+                    text-decoration: none;
+                }
+            }
+        }
+        @include breakpoint-up('medium') {
+            display: block;
+            .nav-all-element {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0;
+                background-color: transparent;
+                .nav-element {
+                    padding-bottom: 0.3em;
+                    padding-top: .3em;
+                    padding-left: 0.2em;
+                    padding-right: .2em;
+                    margin-right: 2em;
+                    &:hover {
+                        background-color: $dark-gray;
+                    }   
+                        .nav-link {
+                            padding-bottom: 0;
+                            // margin-right: 2em;                   
+                    }
+                }
+            }
+        }
+    }
+
+    .hamburger-menu-btn {
+        float: right;
+        margin-right: 1em;
+        margin-top: 0.5em;;
+        background-color: transparent;
+        height: 3em;
+        width: 3em;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+        .hamburger-line {
+            display: block;
+            width: 3em;
+            height: 0.2em;
+            margin-bottom: 0.9em;
+            background-color: $vivid-blue;
+        }       
+    }
+    .open {
+        transform: transform 400ms;
+        .line1 {
+            transform: translateY(10px) rotate(135deg);
+        }
+        .line2 {
+            opacity: 0;
+        }
+        .line3 {
+            transform: translateY(-19px) rotate(-135deg);
+        }
+    }
+    .show {
+        display: block;
+        @include breakpoint-up('medium') {
+            display: none;
         }
     }
 
