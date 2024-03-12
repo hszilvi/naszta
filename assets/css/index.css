@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
-header .head-nav .nav-element {
-  text-decoration: none;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0 auto;
   padding: 0;
   line-height: 1.3;
-  background-color: rgb(34, 35, 36);
+  background-color: #1c1c1c;
   max-width: 90em;
   border: 2px solid red;
   color: #ffffff;
+}
+
+header .head-nav .nav-element {
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */
