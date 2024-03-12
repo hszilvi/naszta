@@ -1,0 +1,47 @@
+.technologies-container {
+    min-height: 10em;
+    // border: 1px solid yellow;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    h2 {
+        margin-left: 2em;
+        margin-bottom: 2em;
+    }
+    .curl {
+        color: $yellow;
+    }
+    .tech-list {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        list-style: none;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .tech-el {
+            width: 8em;
+            height: 2em;
+            margin-right: 2em;
+            margin-bottom: 2em;
+            cursor: pointer;
+            img {
+                // width: 4em;
+                height: 100%;
+            }
+            &:hover {
+                // height: 2.5em;
+                animation: skew-x-shakeng 4s;
+
+                @keyframes skew-x-shakeng{
+                    0% { transform: skewX(-15deg); }
+                    5% { transform: skewX(15deg); }
+                    10% { transform: skewX(-15deg); }
+                    15% { transform: skewX(15deg); }
+                    20% { transform: skewX(0deg); }
+                    100% { transform: skewX(0deg); }
+                   }
+            }
+        }
+    }
+}

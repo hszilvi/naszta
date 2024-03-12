@@ -131,6 +131,62 @@ header .show {
   }
 }
 
+.technologies-container {
+  min-height: 10em;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.technologies-container h2 {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+.technologies-container .curl {
+  color: #F0DB4F;
+}
+.technologies-container .tech-list {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.technologies-container .tech-list .tech-el {
+  width: 8em;
+  height: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+.technologies-container .tech-list .tech-el img {
+  height: 100%;
+}
+.technologies-container .tech-list .tech-el:hover {
+  animation: skew-x-shakeng 4s;
+}
+@keyframes skew-x-shakeng {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
