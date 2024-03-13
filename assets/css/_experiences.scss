@@ -1,0 +1,78 @@
+.experience-container {
+    border: 1px solid $light-gray;
+    .experience-nav-container {
+        .exp-nav-elements {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin-left: 1em;
+            @include breakpoint-up('medium') {
+                margin-left: 3em;
+            }
+            .exp-nav-el {
+                margin-right: 0.1em;
+                background-color: $light-gray;
+                padding-right: 2em;
+                padding-left: .5em;
+                padding-top: .5em;
+                padding-bottom: .5em;
+                font-weight: 400;
+                font-size: .7em;
+                @include breakpoint-up('medium'){
+                    font-size: 1em;
+                }
+                cursor: pointer;
+                &:hover {
+                    background-color: $main-color;
+                    color: $yellow;
+                }
+            }
+        }
+
+
+    }
+    .work-container {
+        border: 2px solid green;
+        .acc-block {
+            margin-left: 1em;
+
+            .curl, .curl2 {
+                color: $yellow;
+                font-weight: 400;
+            }
+            .curl2 {
+                margin-bottom: 1em;
+                margin-left: 1.7em;
+            }
+            .dots {
+                color: $bright-gray;
+                font-weight: 200;
+            }
+            .arrow {
+                color: $bright-gray;
+                font-weight: 400;
+                font-size: 1.1em;
+            }
+            .acc-title {
+                color: $vivid-blue;
+                font-weight: 200;
+            }
+            .acc-content {
+                h4 {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    font-weight: 300;
+                }
+
+                .acc-descr {
+                    color: $yellow;
+                }
+                .year {
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+
+}
