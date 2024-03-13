@@ -187,6 +187,32 @@ header .show {
   }
 }
 
+.publications-container {
+  border-top: 1px solid #3a3a3c;
+  border-bottom: 1px solid #3a3a3c;
+}
+.publications-container h2 {
+  margin-left: 3em;
+}
+.publications-container .articles-list {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+}
+.publications-container .articles-list .article-el {
+  margin-bottom: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.publications-container .articles-list .article-el:hover {
+  background-color: rgba(58, 58, 60, 0.3764705882);
+}
+.publications-container .articles-list .article-el a {
+  text-decoration: none;
+  color: white;
+}
+
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
