@@ -133,18 +133,17 @@ header .show {
 
 .technologies-container {
   min-height: 10em;
-  width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
 }
 .technologies-container h2 {
-  margin-left: 2em;
+  margin-left: 3em;
   margin-bottom: 2em;
 }
 .technologies-container .curl {
   color: #F0DB4F;
 }
 .technologies-container .tech-list {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
   text-decoration: none;
@@ -152,11 +151,11 @@ header .show {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
 .technologies-container .tech-list .tech-el {
   width: 8em;
   height: 2em;
-  margin-right: 2em;
   margin-bottom: 2em;
   cursor: pointer;
 }
@@ -185,6 +184,80 @@ header .show {
   100% {
     transform: skewX(0deg);
   }
+}
+
+.experience-container {
+  border: 1px solid #3a3a3c;
+}
+.experience-container .experience-nav-container .exp-nav-elements {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin-left: 1em;
+}
+@media (min-width: 54em) {
+  .experience-container .experience-nav-container .exp-nav-elements {
+    margin-left: 3em;
+  }
+}
+.experience-container .experience-nav-container .exp-nav-elements .exp-nav-el {
+  margin-right: 0.1em;
+  background-color: #3a3a3c;
+  padding-right: 2em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: 400;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+@media (min-width: 54em) {
+  .experience-container .experience-nav-container .exp-nav-elements .exp-nav-el {
+    font-size: 1em;
+  }
+}
+.experience-container .experience-nav-container .exp-nav-elements .exp-nav-el:hover {
+  background-color: #121212;
+  color: #F0DB4F;
+}
+.experience-container .work-container {
+  border: 2px solid green;
+}
+.experience-container .work-container .acc-block {
+  margin-left: 1em;
+}
+.experience-container .work-container .acc-block .curl, .experience-container .work-container .acc-block .curl2 {
+  color: #F0DB4F;
+  font-weight: 400;
+}
+.experience-container .work-container .acc-block .curl2 {
+  margin-bottom: 1em;
+  margin-left: 1.7em;
+}
+.experience-container .work-container .acc-block .dots {
+  color: #cacccb;
+  font-weight: 200;
+}
+.experience-container .work-container .acc-block .arrow {
+  color: #cacccb;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+.experience-container .work-container .acc-block .acc-title {
+  color: #30BBf2;
+  font-weight: 200;
+}
+.experience-container .work-container .acc-block .acc-content h4 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+.experience-container .work-container .acc-block .acc-content .acc-descr {
+  color: #F0DB4F;
+}
+.experience-container .work-container .acc-block .acc-content .year {
+  font-size: 0.8em;
 }
 
 .publications-container {
