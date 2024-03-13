@@ -1,0 +1,30 @@
+.publications-container {
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    h2 {
+        margin-left: 3em;
+    }
+    .articles-list {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        // text-decoration: none;
+        // border: 1px solid yellow;
+        .article-el {
+            // text-decoration: none;
+            margin-bottom: 2em;
+            // border: 1px solid green;
+            // height: 2em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            &:hover {
+                background-color: $lighter-gray;
+            }
+            a {
+                text-decoration: none;
+                color: $main-font-white;
+            }
+        }
+    }
+}
