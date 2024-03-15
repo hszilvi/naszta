@@ -1,5 +1,6 @@
 .experience-container {
     border: 1px solid $light-gray;
+    padding-bottom: 2em;
     .experience-nav-container {
         .exp-nav-elements {
             display: flex;
@@ -7,8 +8,9 @@
             list-style: none;
             padding: 0;
             margin-left: 1em;
+            margin-bottom: 2em;
             @include breakpoint-up('medium') {
-                margin-left: 3em;
+                margin-left: 4.5em;
             }
             .exp-nav-el {
                 margin-right: 0.1em;
@@ -28,15 +30,23 @@
                     color: $yellow;
                 }
             }
+            .selected {
+                background-color: $main-color;
+            }
+            // .work {
+            //     background-color: $main-color;
+            //     // color: $yellow;
+            // }
         }
-
-
     }
-    .work-container {
-        border: 2px solid green;
+    .work-container, .education-container {
+        // display: block;
+        // border: 2px solid green;
         .acc-block {
-            margin-left: 1em;
-
+            margin-left: 2em;
+            @include breakpoint-up('medium') {
+                margin-left: 4.5em;
+            }
             .curl, .curl2 {
                 color: $yellow;
                 font-weight: 400;
@@ -57,6 +67,7 @@
             .acc-title {
                 color: $vivid-blue;
                 font-weight: 200;
+                cursor: pointer;
             }
             .acc-content {
                 h4 {
@@ -67,12 +78,34 @@
 
                 .acc-descr {
                     color: $yellow;
+                    line-height: 1.1em;
+                    margin-top: 0;
                 }
                 .year {
                     font-size: .8em;
                 }
             }
         }
+    }
+    .cert-container {
+        .cert-acc-block {
+            margin-left: 2em;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint-up('medium') {
+                margin-left: 4.5em;
+            }
+            .cert-acc-title {
+                margin-bottom: 1em;
+                color: $vivid-blue;
+                font-weight: 200;
+                .curl {
+                    color: $yellow;
+                    font-weight: 200;
+                }
+            }
+        }
+
     }
 
 }

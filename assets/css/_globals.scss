@@ -37,3 +37,9 @@ body {
 .hide {
     display: none;
 }
+.change-bg-color-dark {
+    background-color: $main-color;
+}
+.change-bg-color-light {
+    background-color: $light-gray;
+}
