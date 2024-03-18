@@ -8,283 +8,307 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+
     
     <title>Ferenc Nasztanovics</title>
 </head>
 <body>
 
-    <header>
+    <header class="topnav wrapper">
         <!-- hamburger button for mobile view only-->
-        <button class="hamburger-menu-btn hide-for-desktop">
-            <span class="hamburger-line line1"></span>
-            <span class="hamburger-line line2"></span>
-            <span class="hamburger-line line3"></span>
-        </button>
-        <nav class="head-nav">
-            <ul class="nav-all-element ">
-                <li class="nav-element">
-                    <a  class="nav-link" href="">Home</a>
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">About</a>                    
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">Technonolgies</a>
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">Expreriences</a>
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">Publications</a>
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">Contact</a>
-                </li>
-                <li class="nav-element">
-                    <a class="nav-link" href="">Resume</a>
-                </li>
-            </ul>
+        <nav>
+            <span id="nav-label" hidden>Navigation</span>
+        <button 
+            id="btnOpen"    
+            class="topnav__open hamburger" 
+            aria-label="Close" 
+        >
+            <img src="./assets/images/hamburger.svg" alt="" width="40" height="27"></button>
+            <div class="topnav__menu"
+                role="dialog">  
+                <button 
+                    id="btnClose"
+                    class="topnav__close hamburger"
+                    aria-labelledby="nav-label"
+                >
+                    <img src="./assets/images/close.svg" alt="" width="28" height="27">
+        
+        
+                   
+                    <!-- <span class="hamburger-line line1"></span>
+                    <span class="hamburger-line line2"></span>
+                    <span class="hamburger-line line3"></span> -->
+                </button>
+
+                <ul class="topnav__links ">
+                    <li class="topnav__item">
+                        <a  class="topnav__link" href="#">Home</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="#about">About</a>                    
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="#technologies">Technonolgies</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="#experiences">Experiences</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="">Publications</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="#contact">Contact</a>
+                    </li>
+                    <li class="topnav__item">
+                        <a class="topnav__link" href="">Resume</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
+<main>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="welcome">
-            <div class="name">
-                <h1>Ferenc Nasztanovics</h1>
+        <!-- Hero -->
+        <section class="hero" id="about">
+            <div class="welcome" >
+                <div class="name">
+                    <h1>Ferenc Nasztanovics</h1>
+                </div>
+                <div class="titulus">
+                    <div class="titulus-el">
+                        <img class="hero-icon" src="./assets/images/coding.png" alt=""><h2>Software Engineer</h2>
+                    </div>
+                    <div class="titulus-el">
+                        <img class='hero-icon' src="./assets/images/bridge.png" alt=""><p>Bridge Design Engineer</p>
+                    </div>
+                    <div class="titulus-el">
+
+                        <img class='hero-icon' src="./assets/images/brain.png" alt=""><p>Research Scientist</p>
+                    </div>
+                </div>
             </div>
-            <div class="titulus">
-                <div class="titulus-el">
-                    <img class="hero-icon" src="./assets/images/coding.png" alt=""><h2>Software Engineer</h2>
-                </div>
-                <div class="titulus-el">
-                    <img class='hero-icon' src="./assets/images/bridge.png" alt=""><p>Bridge Design Engineer</p>
-                </div>
-                <div class="titulus-el">
-
-                    <img class='hero-icon' src="./assets/images/brain.png" alt=""><p>Research Scientist</p>
-                </div>
+            <div class="personal">
+                <h3>Personal Achievments</h3>
+                <p><span class="year">2016 </span>Wizz Air half marathon (02:01:36)</p>
+                <p><span class="year">2017 </span>Telekom Vivicitta half marathon (01:56:46)</p> 
+                <p><span class="year">2017 </span>EU13, 13th anniversary run of EU membership - 13 km (01:07:54)</p>   
+                <p><span class="year">2017 </span>K&H half marathon (02:00:47)</p>    
+                <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p> 
+                <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p>
+                <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p>  
+                <p><span class="year">2017 </span>K&H Balaton half marathon (01:57:11)</p>
+                <p><span class="year">2018 </span>Telekom Vivicitta half marathon (01:56:39)</p>
+                <p><span class="year">2018 </span>EU14, 14th anniversary run of EU membership - 14km (01:14:26)</p>
+                <p><span class="year">2018 </span>Wizz Air Budapest half marathon (02:05:51)</p>
+                
+                
+                
+                
+                
+                
             </div>
-        </div>
-        <div class="personal">
-            <h3>Personal Achievments</h3>
-            <p><span class="year">2016 </span>Wizz Air half marathon (02:01:36)</p>
-            <p><span class="year">2017 </span>Telekom Vivicitta half marathon (01:56:46)</p> 
-            <p><span class="year">2017 </span>EU13, 13th anniversary run of EU membership - 13 km (01:07:54)</p>   
-            <p><span class="year">2017 </span>K&H half marathon (02:00:47)</p>    
-            <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p> 
-            <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p>
-            <p><span class="year">2017 </span>Wizz Air half marathon (01:58:57)</p>  
-            <p><span class="year">2017 </span>K&H Balaton half marathon (01:57:11)</p>
-            <p><span class="year">2018 </span>Telekom Vivicitta half marathon (01:56:39)</p>
-            <p><span class="year">2018 </span>EU14, 14th anniversary run of EU membership - 14km (01:14:26)</p>
-            <p><span class="year">2018 </span>Wizz Air Budapest half marathon (02:05:51)</p>
-            
-            
-            
-            
-            
-            
-        </div>
-    </section>
+        </section>
 
-<!-- technologies -->
-    <section class="technologies-container">
-        <h2><span class="curl">{ </span>Technologies<span class="curl"> }</span></h2>
-        <ul class="tech-list">
-            <li class="tech-el"><img src="./assets/images/C++_logo.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/Python-logo-notext.svg.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/2560px-Qt_logo_2016.svg.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/Visualization_Toolkit_logo.svg.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/Paraview_logo.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/autocad-logo2.png" alt=""></li>
-            <li class="tech-el"><img src="./assets/images/ansys-logo.jpg" alt=""></li>
-        </ul>
-    </section>
-<!-- Experiences -->
-    <section class="experience-container">
-        <nav class="experience-nav-container">
-            <ul class="exp-nav-elements">
-                <li class="exp-nav-el work selected">Work Experiences</li>
-                <li class="exp-nav-el education">Education</li>
-                <li class="exp-nav-el certs">Certications</li>
+    <!-- technologies -->
+        <section class="technologies-container" id="technologies">
+            <h2><span class="curl">{ </span>Technologies<span class="curl"> }</span></h2>
+            <ul class="tech-list">
+                <li class="tech-el"><img src="./assets/images/C++_logo.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/Python-logo-notext.svg.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/2560px-Qt_logo_2016.svg.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/Visualization_Toolkit_logo.svg.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/Paraview_logo.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/autocad-logo2.png" alt=""></li>
+                <li class="tech-el"><img src="./assets/images/ansys-logo.jpg" alt=""></li>
             </ul>
-        
+        </section>
+    <!-- Experiences -->
+        <section class="experience-container" id="experiences">
+            <nav class="experience-nav-container">
+                <ul class="exp-nav-elements">
+                    <li class="exp-nav-el work selected">Work Experiences</li>
+                    <li class="exp-nav-el education">Education</li>
+                    <li class="exp-nav-el certs">Certications</li>
+                </ul>
+            
 
-        </nav>
-        <div class="work-container">
-            <!-- <h2>Work Experiences</h2> -->
-            <dl class="acc-block">
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Citadell Securities <span class="dots hide">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content">
-                    <h4>Software Engineer</h4>
-                    <p class="year">2019-present</p>  
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Vice President Software Engineer</h4>
-                    <p class="year">2016-2019</p>  
-                    <p class="acc-descr">Pricing and risk team, bond trading group, ICT</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Associate Software Engineer</h4>
-                    <p class="year">2012-2015</p>  
-                    <p class="acc-descr">Pricing and risk team, bond trading group, ISGT</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Strusoft Ltd. <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Software Engineer</h4>
-                    <p class="year">2010-2012</p>  
-                    <p class="acc-descr">Development of FEM software</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Department of Structural Mechanics</h4>
-                    <p class="year">2009-2010</p>  
-                    <p class="acc-descr">One year internship as Research Engineer, Toshiba R&D Center, Kawasaki, Japan</p>
-                    <p class="acc-descr">Laboratory: Computer Architecture and Security System Laboratory [CSL]</p>
-                    <p class="acc-descr">Research topic: compiler technology</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>GE Healthcare <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Öveges PhD fellowship</h4>
-                    <p class="year">2006-2009</p>  
-                    <p class="acc-descr">Research topic: numerical analysis of human brain aneurysm</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Főmterv Zrt. <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>Civil Engineer</h4>
-                    <p class="year">2005-2009</p>  
-                    <p class="acc-descr">Numerical analysis of ship movement of Pentele Danube bridge (wingspan: 312m)</p>
-                    <p class="acc-descr">Numerical analysis of test loads on the Pentele Danube bridge</p>
-                    <p class="acc-descr">Planning a section of the underground station of Budapest (DBR4, Tétényi út | DBR4, Bocskai út)</p>
-                    <p class="acc-descr">Planning multiple minor bridges on M6 highway (860, 912, 966 and 1065)</p>
-                    <p class="acc-descr">Planning a section of the reconstruction of the Margit Danube bridge</p>
-                </dd>
-                <div class="curl2">}</div>
-
-
-            </dl>
-
-
-        </div>
-        <div class="education-container hide">
-            <dl class="acc-block">
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics, Department of Structural Mechanics <span class="dots hide">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content">
-                    <h4>PhD absolutory</h4>
-                    <p class="year">2006-2009</p>  
-                    <p class="acc-descr">Research topic: Numerical analysis of human brain aneurysms</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>MSc</h4>
-                    <p class="year">1998-2006</p>  
-                    <p class="acc-descr">Faculty of Civil Engineering, specialized in Structural Engineering (Bridge and High Building Engineer)</p>
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Diploma on Software Administrator <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <!-- <h4></h4> -->
-                    <p class="year">1994-1998</p>  
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Vörösmarty Mihály Gymnasium <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <h4>specialized in Mathematics and Physics</h4>
-                    <p class="year">1994-1998</p>  
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-                <!-- <dt> -->
-                    <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>BTF, Gyakorló Általános Iskola <span class="dots">...</span></a>
-                <!-- </dt> -->
-                <dd class="acc-content hide">
-                    <p class="year">1986-1994</p>  
-                </dd>
-                <div class="curl2">}</div>
-                <!--  -->
-               
+            </nav>
+            <div class="work-container">
+                <!-- <h2>Work Experiences</h2> -->
+                <dl class="acc-block">
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Citadell Securities <span class="dots hide">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content">
+                        <h4>Software Engineer</h4>
+                        <p class="year">2019-present</p>  
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Vice President Software Engineer</h4>
+                        <p class="year">2016-2019</p>  
+                        <p class="acc-descr">Pricing and risk team, bond trading group, ICT</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Associate Software Engineer</h4>
+                        <p class="year">2012-2015</p>  
+                        <p class="acc-descr">Pricing and risk team, bond trading group, ISGT</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Strusoft Ltd. <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Software Engineer</h4>
+                        <p class="year">2010-2012</p>  
+                        <p class="acc-descr">Development of FEM software</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Department of Structural Mechanics</h4>
+                        <p class="year">2009-2010</p>  
+                        <p class="acc-descr">One year internship as Research Engineer, Toshiba R&D Center, Kawasaki, Japan</p>
+                        <p class="acc-descr">Laboratory: Computer Architecture and Security System Laboratory [CSL]</p>
+                        <p class="acc-descr">Research topic: compiler technology</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>GE Healthcare <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Öveges PhD fellowship</h4>
+                        <p class="year">2006-2009</p>  
+                        <p class="acc-descr">Research topic: numerical analysis of human brain aneurysm</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Főmterv Zrt. <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>Civil Engineer</h4>
+                        <p class="year">2005-2009</p>  
+                        <p class="acc-descr">Numerical analysis of ship movement of Pentele Danube bridge (wingspan: 312m)</p>
+                        <p class="acc-descr">Numerical analysis of test loads on the Pentele Danube bridge</p>
+                        <p class="acc-descr">Planning a section of the underground station of Budapest (DBR4, Tétényi út | DBR4, Bocskai út)</p>
+                        <p class="acc-descr">Planning multiple minor bridges on M6 highway (860, 912, 966 and 1065)</p>
+                        <p class="acc-descr">Planning a section of the reconstruction of the Margit Danube bridge</p>
+                    </dd>
+                    <div class="curl2">}</div>
 
 
-            </dl>
-        </div>
-        <div class="cert-container hide">
-            <dl class="cert-acc-block">
-                <!--  -->
-                    <a class="cert-acc-title"><span class="curl">{ </span>2011 Certified Advanced ANSYS Mechanical Engineer <span class="curl">}</span></a>
-                <!--  -->
-                    <a class="cert-acc-title"><span class="curl">{ </span>2008 Hungarian Chamber of Engineer <span class="curl">}</span></a>
-                <!--  -->
-                    <a class="cert-acc-title"><span class="curl">{ </span>2003 Hungarian Society of Biomechanics <span class="curl">}</span></a>
-            </dl>
-        </div>
+                </dl>
+
+
+            </div>
+            <div class="education-container hide">
+                <dl class="acc-block">
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics, Department of Structural Mechanics <span class="dots hide">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content">
+                        <h4>PhD absolutory</h4>
+                        <p class="year">2006-2009</p>  
+                        <p class="acc-descr">Research topic: Numerical analysis of human brain aneurysms</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>MSc</h4>
+                        <p class="year">1998-2006</p>  
+                        <p class="acc-descr">Faculty of Civil Engineering, specialized in Structural Engineering (Bridge and High Building Engineer)</p>
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Diploma on Software Administrator <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <!-- <h4></h4> -->
+                        <p class="year">1994-1998</p>  
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Vörösmarty Mihály Gymnasium <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <h4>specialized in Mathematics and Physics</h4>
+                        <p class="year">1994-1998</p>  
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                    <!-- <dt> -->
+                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>BTF, Gyakorló Általános Iskola <span class="dots">...</span></a>
+                    <!-- </dt> -->
+                    <dd class="acc-content hide">
+                        <p class="year">1986-1994</p>  
+                    </dd>
+                    <div class="curl2">}</div>
+                    <!--  -->
+                
+
+
+                </dl>
+            </div>
+            <div class="cert-container hide">
+                <dl class="cert-acc-block">
+                    <!--  -->
+                        <a class="cert-acc-title"><span class="curl">{ </span>2011 Certified Advanced ANSYS Mechanical Engineer <span class="curl">}</span></a>
+                    <!--  -->
+                        <a class="cert-acc-title"><span class="curl">{ </span>2008 Hungarian Chamber of Engineer <span class="curl">}</span></a>
+                    <!--  -->
+                        <a class="cert-acc-title"><span class="curl">{ </span>2003 Hungarian Society of Biomechanics <span class="curl">}</span></a>
+                </dl>
+            </div>
 
 
 
+
+        </section>
+    <!-- publications -->
+    <section class="publications-container">
+
+        <h2>Publications</h2>
+        <ul class="articles-list">
+            <li class="article-el"><a href="">> Systems, Apparatus and Processes for Automated Blood Flow Assessment of Vasculature</a></li>
+            <li class="article-el"><a href="">> A Pentele híd mederhídja beúsztatásának érzékenyésgvizsgálata</a></li>
+            <li class="article-el"><a href="">> Impact of Aneurysmal Geometry on Intraaneurysmal Flow: A Computerized Flow Simulation Study</a></li>
+            <li class="article-el"><a href="">> Laboratory Tests for Strength Parameters of Brain Aneurysms</a></li>
+            <li class="article-el"><a href="">> Article: Taking a Turn</a></li>
+            <li class="article-el"><a href="">> Erection of Dunaújváros Danube Bridge</a></li>
+            <li class="article-el"><a href="">> Impact of Morphology on Flow Pattern: Three Dimensional Flow Simulation in Human Intracranial Aneurysm</a></li>
+            <li class="article-el"><a href="">> A Biomechanical Study of the Mechanical Stress Transmission of Dental Implants Using Finite Elements Analysis. Part II. Experiments</a></li>
+            <li class="article-el"><a href="">> Numerical Analysis of Giant Brain Aneurysm</a></li>
+        </ul>
 
     </section>
-<!-- publications -->
-<section class="publications-container">
-
-    <h2>Publications</h2>
-    <ul class="articles-list">
-        <li class="article-el"><a href="">> Systems, Apparatus and Processes for Automated Blood Flow Assessment of Vasculature</a></li>
-        <li class="article-el"><a href="">> A Pentele híd mederhídja beúsztatásának érzékenyésgvizsgálata</a></li>
-        <li class="article-el"><a href="">> Impact of Aneurysmal Geometry on Intraaneurysmal Flow: A Computerized Flow Simulation Study</a></li>
-        <li class="article-el"><a href="">> Laboratory Tests for Strength Parameters of Brain Aneurysms</a></li>
-        <li class="article-el"><a href="">> Article: Taking a Turn</a></li>
-        <li class="article-el"><a href="">> Erection of Dunaújváros Danube Bridge</a></li>
-        <li class="article-el"><a href="">> Impact of Morphology on Flow Pattern: Three Dimensional Flow Simulation in Human Intracranial Aneurysm</a></li>
-        <li class="article-el"><a href="">> A Biomechanical Study of the Mechanical Stress Transmission of Dental Implants Using Finite Elements Analysis. Part II. Experiments</a></li>
-        <li class="article-el"><a href="">> Numerical Analysis of Giant Brain Aneurysm</a></li>
-    </ul>
-
-</section>
+</main>
     <!-- footer -->
-    <footer>
+    <footer id="contact">
         <div class="socials-block">
             <div class="linkedin social-logo"><img src="./assets/images/linkedinggrey.png" alt=""></div>
             <div class="github social-logo"><img src="./assets/images/github-icon-png-8-transparent.png"></div>
@@ -313,7 +337,7 @@
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
