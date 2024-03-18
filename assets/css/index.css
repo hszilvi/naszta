@@ -47,6 +47,12 @@ body {
   background-color: #3a3a3c;
 }
 
+.turn {
+  display: inline-block;
+  transform: rotateZ(90deg);
+  margin-right: 0.6em;
+}
+
 .topnav {
   height: 3em;
   background-color: #3a3a3c;
@@ -54,6 +60,7 @@ body {
   justify-content: flex-end;
   margin: 0 auto;
   position: sticky;
+  padding-right: 3em;
 }
 .topnav .hamburger {
   background: none;
@@ -84,7 +91,6 @@ body {
   }
 }
 .topnav__links {
-  border: 1px solid yellow;
   display: flex;
   align-items: center;
   gap: 2em;

@@ -19,6 +19,7 @@ const eduCont = document.querySelector('.education-container');
 const certCont = document.querySelector('.cert-container');
 const publCont = document.querySelector('.publications-container');
 const publExp = document.querySelector('.publications');
+const arrow = document.querySelectorAll('.arrow');
 
 const currentDate = dayjs();
 const today = document.querySelector('#today');
@@ -95,10 +96,12 @@ for (let i = 0; i < openAccBtn.length; i++) {
         let panel = e.currentTarget.nextElementSibling;
         if (panel.classList.contains('hide')) {
             panel.classList.remove('hide');
-            dots[i].classList.add('hide');           
+            dots[i].classList.add('hide');  
+            arrow[i].classList.add('turn');         
         } else {
             panel.classList.add('hide');
             dots[i].classList.remove('hide');
+            arrow[i].classList.remove('turn');
         }
     })
 }
