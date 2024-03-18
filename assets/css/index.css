@@ -354,29 +354,21 @@ body {
   color: #F0DB4F;
   font-weight: 200;
 }
-
-.publications-container {
-  border-top: 1px solid #3a3a3c;
-  border-bottom: 1px solid #3a3a3c;
-}
-.publications-container h2 {
-  margin-left: 3em;
-}
-.publications-container .articles-list {
+.experience-container .publications-container .article__list {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
 }
-.publications-container .articles-list .article-el {
+.experience-container .publications-container .article__list .article__el {
   margin-bottom: 2em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.publications-container .articles-list .article-el:hover {
+.experience-container .publications-container .article__list .article__el:hover {
   background-color: rgba(58, 58, 60, 0.3764705882);
 }
-.publications-container .articles-list .article-el a {
+.experience-container .publications-container .article__list .article__el a {
   text-decoration: none;
   color: white;
 }
