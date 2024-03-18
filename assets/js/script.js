@@ -16,7 +16,10 @@ const eduExp = document.querySelector('.education');
 const certExp = document.querySelector('.certs');
 const workCont = document.querySelector('.work-container');
 const eduCont = document.querySelector('.education-container');
-const certCont = document.querySelector('.cert-container')
+const certCont = document.querySelector('.cert-container');
+
+const currentDate = dayjs();
+const today = document.querySelector('#today');
 
 const setupTopNav = (e) => {
     if (e.matches) {
@@ -98,37 +101,6 @@ for (let i = 0; i < openAccBtn.length; i++) {
     })
 }
 
-// eduExp.addEventListener('click', () => {
-//     if (!eduExp.classList.contains('selected') && (eduCont.classList.contains('hide'))) {
-//         eduExp.classList.add('selected')
-//         workCont.classList.add('hide');
-//         eduCont.classList.remove('hide')
-//         certCont.classList.add('hide');
-//         workExp.classList.remove('selected');
-//         certExp.classList.remove('selected');; 
-//     } 
-// });
-
-// certExp.addEventListener('click', () => {
-//     if (certCont.classList.contains('hide') && !(certExp.classList.contains('selected'))) {
-//         certExp.classList.add('selected');
-//         certCont.classList.remove('hide');
-//         workExp.classList.remove('selected');
-//         workCont.classList.add('hide');
-//         eduCont.classList.add('hide');
-//         eduExp.classList.remove('selected');
-//     } 
-// })
-// workExp.addEventListener('click', () => {
-//     if (!workExp.classList.contains('selected') && workCont.classList.contains('hide')) {
-//         workCont.classList.remove('hide');
-//         eduCont.classList.add('hide');
-//         eduExp.classList.remove('selected');
-//         certCont.classList.add('hide');
-//         certExp.classList.remove('selected')
-//     } 
-// })
-
 eduExp.addEventListener('click', () => {
     toggleSection(eduExp, eduCont);
 });
@@ -158,3 +130,4 @@ function toggleSection(exp, cont) {
     }
 }
 
+today.innerHTML = currentDate.format('YYYY');

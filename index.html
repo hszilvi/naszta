@@ -344,12 +344,15 @@
 
             </form>
         </div>
-        <div class="copy">&copy;2024 Ferenc Nasztanovics
+        <div class="copy">&copy; <span id="today"></span> Ferenc Nasztanovics
 
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+<script>dayjs.extend(window.dayjs_plugin_utc)</script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
