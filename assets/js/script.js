@@ -17,6 +17,8 @@ const certExp = document.querySelector('.certs');
 const workCont = document.querySelector('.work-container');
 const eduCont = document.querySelector('.education-container');
 const certCont = document.querySelector('.cert-container');
+const publCont = document.querySelector('.publications-container');
+const publExp = document.querySelector('.publications');
 
 const currentDate = dayjs();
 const today = document.querySelector('#today');
@@ -112,17 +114,20 @@ certExp.addEventListener('click', () => {
 workExp.addEventListener('click', () => {
     toggleSection(workExp, workCont);
 });
+publExp.addEventListener('click', () => {
+    toggleSection(publExp, publCont);
+});
 
 function toggleSection(exp, cont) {
     if (!exp.classList.contains('selected') && cont.classList.contains('hide')) {
         exp.classList.add('selected');
         cont.classList.remove('hide');
-        [eduExp, certExp, workExp].forEach(item => {
+        [eduExp, certExp, workExp, publExp].forEach(item => {
             if (item !== exp) {
                 item.classList.remove('selected');
             }
         });
-        [eduCont, certCont, workCont].forEach(item => {
+        [eduCont, certCont, workCont, publCont].forEach(item => {
             if (item !== cont) {
                 item.classList.add('hide');
             }
