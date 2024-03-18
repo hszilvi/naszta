@@ -1,5 +1,11 @@
-const hamburgerBtn = document.querySelector('.hamburger-menu-btn');
-const mobileNav = document.querySelector('.nav-all-element');
+// const hamburgerBtn = document.querySelector('.hamburger-menu-btn');
+const btnOpen = document.querySelector('#btnOpen');
+const btnClose = document.querySelector('#btnClose');
+const media = window.matchMedia('(width < 54em)')
+const topNavMenu = document.querySelector('.topnav__menu');
+const main = document.querySelector('main');
+const body = document.querySelector('body');
+
 const submitBtn = document.querySelector('#submit-btn');
 
 const openAccBtn = document.querySelectorAll('.acc-title');
@@ -12,17 +18,43 @@ const workCont = document.querySelector('.work-container');
 const eduCont = document.querySelector('.education-container');
 const certCont = document.querySelector('.cert-container')
 
-
-hamburgerBtn.addEventListener('click', () => {
-    if (!hamburgerBtn.classList.contains('open')) {
-        hamburgerBtn.classList.add('open');
-        mobileNav.classList.add('show'); 
-        console.log('clicked')
+const setupTopNav = (e) => {
+    if (e.matches) {
+        topNavMenu.setAttribute('inert', '');
+        topNavMenu.style.transition = 'none' ;
     } else {
-        hamburgerBtn.classList.remove('open');
-        mobileNav.classList.remove('show');
+        closeMobileMenu();
+        topNavMenu.removeAttribute('inert')
     }
-})
+}
+
+const openMobileMenu = () => {
+    btnOpen.setAttribute('aria-expanded', 'true');
+    topNavMenu.removeAttribute('inert');
+    console.log('clicked')
+    topNavMenu.removeAttribute('style');
+    main.setAttribute('inert', '');
+    bodyScrollLockUpgrade.disableBodyScroll(body);
+    btnClose.focus();
+}
+const closeMobileMenu = () => {
+    btnOpen.setAttribute('aria-expanded', 'false');
+    console.log('close clicked');
+    topNavMenu.setAttribute('inert', '');
+    main.removeAttribute('inert')
+    bodyScrollLockUpgrade.enableBodyScroll(body);
+    btnOpen.focus();
+    setTimeout(() => {
+        topNavMenu.style.transition = 'none';
+    }, 500);
+}
+
+setupTopNav(media);
+btnOpen.addEventListener('click', openMobileMenu);
+btnClose.addEventListener('click', closeMobileMenu);
+
+
+
 
 const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
