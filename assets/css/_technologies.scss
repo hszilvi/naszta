@@ -1,18 +1,20 @@
-.technologies-container {
-    min-height: 10em;
-    // border-top: 1px solid $light-gray;
-    // border: 1px solid yellow;
-    // width: 90vw;
-
-    h2 {
-        margin-left: 3em;
+.technologies {
+    &__container {
+        min-height: 10em;
+        border-bottom: 1px solid $light-gray;
         margin-bottom: 2em;
+        h2 {
+            margin-left: 1em;
+            margin-bottom: 2em;
+            @include breakpoint-up('medium') {
+                margin-left: 3em;
+            }
+        }
+        .curl {
+            color: $yellow;
+        }
     }
-    .curl {
-        color: $yellow;
-    }
-    .tech-list {
-        // border: 1px solid yellow;
+    &__list {
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -23,29 +25,25 @@
         align-items: center;
         justify-content: center;
         width: 90%;
-        .tech-el {
-            width: 8em;
-            height: 2em;
-            // margin-right: 2em;
-            margin-bottom: 2em;
-            cursor: pointer;
-            img {
-                // width: 4em;
-                height: 100%;
-            }
-            &:hover {
-                // height: 2.5em;
-                animation: skew-x-shakeng 4s;
-
-                @keyframes skew-x-shakeng{
-                    0% { transform: skewX(-15deg); }
-                    5% { transform: skewX(15deg); }
-                    10% { transform: skewX(-15deg); }
-                    15% { transform: skewX(15deg); }
-                    20% { transform: skewX(0deg); }
-                    100% { transform: skewX(0deg); }
-                   }
-            }
+        
+    }
+    &__el {
+        width: 8em;
+        height: 2em;
+        margin-bottom: 2em;
+        > img {
+            height: 100%;
+        }
+        &:hover {
+            animation: skew-x-shakeng 4s;
+            @keyframes skew-x-shakeng{
+                0% { transform: skewX(-15deg); }
+                5% { transform: skewX(15deg); }
+                10% { transform: skewX(-15deg); }
+                15% { transform: skewX(15deg); }
+                20% { transform: skewX(0deg); }
+                100% { transform: skewX(0deg); }
+               }
         }
     }
 }

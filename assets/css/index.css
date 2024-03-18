@@ -191,17 +191,24 @@ body {
   color: #30BBf2;
 }
 
-.technologies-container {
+.technologies__container {
   min-height: 10em;
-}
-.technologies-container h2 {
-  margin-left: 3em;
+  border-bottom: 1px solid #3a3a3c;
   margin-bottom: 2em;
 }
-.technologies-container .curl {
+.technologies__container h2 {
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+@media (min-width: 64em) {
+  .technologies__container h2 {
+    margin-left: 3em;
+  }
+}
+.technologies__container .curl {
   color: #F0DB4F;
 }
-.technologies-container .tech-list {
+.technologies__list {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -213,16 +220,15 @@ body {
   justify-content: center;
   width: 90%;
 }
-.technologies-container .tech-list .tech-el {
+.technologies__el {
   width: 8em;
   height: 2em;
   margin-bottom: 2em;
-  cursor: pointer;
 }
-.technologies-container .tech-list .tech-el img {
+.technologies__el > img {
   height: 100%;
 }
-.technologies-container .tech-list .tech-el:hover {
+.technologies__el:hover {
   animation: skew-x-shakeng 4s;
 }
 @keyframes skew-x-shakeng {
