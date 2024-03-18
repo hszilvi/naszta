@@ -43,3 +43,9 @@ body {
 .change-bg-color-light {
     background-color: $light-gray;
 }
+.turn {
+    display: inline-block;
+    transform: rotateZ(90deg);
+    margin-right: .6em;
+    // background-color: red;
+}
