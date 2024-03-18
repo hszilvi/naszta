@@ -408,6 +408,7 @@ footer .socials-block .social-logo {
   margin: 1em;
   width: 2.5em;
   height: 2.5em;
+  cursor: pointer;
 }
 footer .socials-block .social-logo img {
   width: 2.5em;
