@@ -309,13 +309,24 @@
     </section>
 </main>
     <!-- footer -->
-    <footer id="contact">
+    <footer id="contact" aria-label="Contact information">
         <div class="socials-block">
-            <div class="linkedin social-logo"><img src="./assets/images/linkedinggrey.png" alt=""></div>
-            <div class="github social-logo"><img src="./assets/images/github-icon-png-8-transparent.png"></div>
-            <div class="stack social-logo"><img src="./assets/images/stackoverflow-48.png" alt=""></div>
+            <div class="linkedin social-logo">
+                <a href="https://www.linkedin.com/in/naszta/?originalSubdomain=hu" target="_blank">
+                    <img src="./assets/images/linkedinggrey.png" alt="linkedin_logo">
+                </a></div>
+            <div class="github social-logo">
+                <a href="https://github.com/naszta" target="_blank">
+                    <img src="./assets/images/github-icon-png-8-transparent.png" alt="github_logo">
+                </a>
+            </div>
+            <div class="stack social-logo">
+                <a href="https://stackoverflow.com/users/463680/naszta" target="_blank">
+                    <img src="./assets/images/stackoverflow-48.png" alt="stackoverflow_logo">
+                </a>
+            </div>
         </div>
-        <div class="contact-form">
+        <div class="contact-form" role="form" >
             <form class="form-container">
                 <label>Name:</label>
                 <input type="text" id="name" placeholder="John Doe" required="">
