@@ -2,6 +2,8 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5em;
 }
 *, *::before, *::after {
     box-sizing: inherit;
@@ -24,6 +26,9 @@ body {
     height: 100vh;
 
 }
+main {
+    margin-block-start: 3em;
+}
 .hide-for-desktop {
     @include breakpoint-up('medium') {
         display: none;
@@ -42,4 +47,8 @@ body {
 }
 .change-bg-color-light {
     background-color: $light-gray;
+}
+.turn {
+    transform: rotateZ(90deg);
+    margin-right: .6em;
 }

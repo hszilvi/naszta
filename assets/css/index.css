@@ -2,6 +2,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
 }
 
 *, *::before, *::after {
@@ -21,6 +23,10 @@ body {
   font-weight: 100;
   font-style: normal;
   height: 100vh;
+}
+
+main {
+  margin-block-start: 3em;
 }
 
 @media (min-width: 64em) {
@@ -47,13 +53,24 @@ body {
   background-color: #3a3a3c;
 }
 
+.turn {
+  transform: rotateZ(90deg);
+  margin-right: 0.6em;
+}
+
 .topnav {
   height: 3em;
   background-color: #3a3a3c;
   display: flex;
   justify-content: flex-end;
-  margin: 0 auto;
-  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  position: fixed;
+  max-width: 90em;
+  width: 100%;
+  z-index: 10;
+  top: 0;
 }
 .topnav .hamburger {
   background: none;
@@ -84,13 +101,12 @@ body {
   }
 }
 .topnav__links {
-  border: 1px solid yellow;
   display: flex;
   align-items: center;
   gap: 2em;
   color: white;
   margin: 0;
-  padding: 0;
+  padding: 0 3em 0 0;
 }
 @media (max-width: 63.999em) {
   .topnav__links {
@@ -139,7 +155,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  margin-bottom: 3em;
+  margin-block-start: 5em;
+  margin-block-end: 2em;
 }
 @media (min-width: 64em) {
   .hero {
@@ -313,9 +330,7 @@ body {
   font-weight: 200;
 }
 .experience-container .work-container .acc-block .arrow, .experience-container .education-container .acc-block .arrow {
-  color: #cacccb;
-  font-weight: 400;
-  font-size: 1.1em;
+  margin-right: 0.7em;
 }
 .experience-container .work-container .acc-block .acc-title, .experience-container .education-container .acc-block .acc-title {
   color: #30BBf2;
@@ -354,29 +369,21 @@ body {
   color: #F0DB4F;
   font-weight: 200;
 }
-
-.publications-container {
-  border-top: 1px solid #3a3a3c;
-  border-bottom: 1px solid #3a3a3c;
-}
-.publications-container h2 {
-  margin-left: 3em;
-}
-.publications-container .articles-list {
+.experience-container .publications-container .article__list {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
 }
-.publications-container .articles-list .article-el {
+.experience-container .publications-container .article__list .article__el {
   margin-bottom: 2em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-.publications-container .articles-list .article-el:hover {
+.experience-container .publications-container .article__list .article__el:hover {
   background-color: rgba(58, 58, 60, 0.3764705882);
 }
-.publications-container .articles-list .article-el a {
+.experience-container .publications-container .article__list .article__el a {
   text-decoration: none;
   color: white;
 }
