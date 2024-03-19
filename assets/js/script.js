@@ -64,11 +64,16 @@ media.addEventListener('change', function (e) {
 
   });
 
-for (let i = 0; i<navLinks.length; i++) {
-    navLinks[i].addEventListener('click', () => {
-        closeMobileMenu();
-    })
-}
+
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', () => {
+            console.log('btn clicked')
+            // closeMobileMenu();
+            btnOpen.setAttribute('aria-expanded', 'false');
+      
+        })
+    }
+
 
 const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
