@@ -1,10 +1,10 @@
-// const hamburgerBtn = document.querySelector('.hamburger-menu-btn');
 const btnOpen = document.querySelector('#btnOpen');
 const btnClose = document.querySelector('#btnClose');
 const media = window.matchMedia('(width < 54em)')
 const topNavMenu = document.querySelector('.topnav__menu');
 const main = document.querySelector('main');
 const body = document.querySelector('body');
+const navLinks = document.querySelectorAll('.topnav__item');
 
 const submitBtn = document.querySelector('#submit-btn');
 
@@ -24,20 +24,10 @@ const arrow = document.querySelectorAll('.arrow');
 const currentDate = dayjs();
 const today = document.querySelector('#today');
 
-const setupTopNav = (e) => {
-    if (e.matches) {
-        topNavMenu.setAttribute('inert', '');
-        topNavMenu.style.transition = 'none' ;
-    } else {
-        closeMobileMenu();
-        topNavMenu.removeAttribute('inert')
-    }
-}
 
 const openMobileMenu = () => {
     btnOpen.setAttribute('aria-expanded', 'true');
     topNavMenu.removeAttribute('inert');
-    console.log('clicked')
     topNavMenu.removeAttribute('style');
     main.setAttribute('inert', '');
     bodyScrollLockUpgrade.disableBodyScroll(body);
@@ -45,7 +35,6 @@ const openMobileMenu = () => {
 }
 const closeMobileMenu = () => {
     btnOpen.setAttribute('aria-expanded', 'false');
-    console.log('close clicked');
     topNavMenu.setAttribute('inert', '');
     main.removeAttribute('inert')
     bodyScrollLockUpgrade.enableBodyScroll(body);
@@ -54,13 +43,32 @@ const closeMobileMenu = () => {
         topNavMenu.style.transition = 'none';
     }, 500);
 }
+const setupTopNav = (e) => {
+    if (e.matches) {
+        topNavMenu.setAttribute('inert', '');
+        topNavMenu.style.transition = 'none' ;
+    } else {
+
+        closeMobileMenu();
+        topNavMenu.removeAttribute('inert')
+
+    }
+}
 
 setupTopNav(media);
 btnOpen.addEventListener('click', openMobileMenu);
 btnClose.addEventListener('click', closeMobileMenu);
 
+media.addEventListener('change', function (e) {
+    setupTopNav(e);
 
+  });
 
+for (let i = 0; i<navLinks.length; i++) {
+    navLinks[i].addEventListener('click', () => {
+        closeMobileMenu();
+    })
+}
 
 const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

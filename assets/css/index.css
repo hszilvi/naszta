@@ -2,6 +2,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5em;
 }
 
 *, *::before, *::after {
@@ -21,6 +23,10 @@ body {
   font-weight: 100;
   font-style: normal;
   height: 100vh;
+}
+
+main {
+  margin-block-start: 3em;
 }
 
 @media (min-width: 64em) {
@@ -48,7 +54,6 @@ body {
 }
 
 .turn {
-  display: inline-block;
   transform: rotateZ(90deg);
   margin-right: 0.6em;
 }
@@ -58,9 +63,14 @@ body {
   background-color: #3a3a3c;
   display: flex;
   justify-content: flex-end;
-  margin: 0 auto;
-  position: sticky;
-  padding-right: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  position: fixed;
+  max-width: 90em;
+  width: 100%;
+  z-index: 10;
+  top: 0;
 }
 .topnav .hamburger {
   background: none;
@@ -96,7 +106,7 @@ body {
   gap: 2em;
   color: white;
   margin: 0;
-  padding: 0;
+  padding: 0 3em 0 0;
 }
 @media (max-width: 63.999em) {
   .topnav__links {
@@ -145,7 +155,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  margin-bottom: 3em;
+  margin-block-start: 5em;
+  margin-block-end: 2em;
 }
 @media (min-width: 64em) {
   .hero {
@@ -319,9 +330,7 @@ body {
   font-weight: 200;
 }
 .experience-container .work-container .acc-block .arrow, .experience-container .education-container .acc-block .arrow {
-  color: #cacccb;
-  font-weight: 400;
-  font-size: 1.1em;
+  margin-right: 0.7em;
 }
 .experience-container .work-container .acc-block .acc-title, .experience-container .education-container .acc-block .acc-title {
   color: #30BBf2;

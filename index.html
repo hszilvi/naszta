@@ -24,28 +24,23 @@
         <button 
             id="btnOpen"    
             class="topnav__open hamburger" 
-            aria-label="Close" 
+            aria-expanded="false"
+            aria-labelledby="nav-label"
         >
             <img src="./assets/images/hamburger.svg" alt="" width="40" height="27"></button>
             <div class="topnav__menu"
-                role="dialog">  
+                role="dialog" aria-labelledby="nav-label">  
                 <button 
                     id="btnClose"
                     class="topnav__close hamburger"
-                    aria-labelledby="nav-label"
+                    aria-label="Close"
                 >
                     <img src="./assets/images/close.svg" alt="" width="28" height="27">
-        
-        
-                   
-                    <!-- <span class="hamburger-line line1"></span>
-                    <span class="hamburger-line line2"></span>
-                    <span class="hamburger-line line3"></span> -->
                 </button>
 
                 <ul class="topnav__links ">
                     <li class="topnav__item">
-                        <a  class="topnav__link" href="#">Home</a>
+                        <a  class="topnav__link" href="#"></a>
                     </li>
                     <li class="topnav__item">
                         <a class="topnav__link" href="#about">About</a>                    
@@ -87,7 +82,7 @@
                 </div>
             </div>
             <div class="personal">
-                <h3>Personal Achievments</h3>
+                <h3>Personal Achievements</h3>
                 <p><span class="year">2016 </span>Wizz Air half marathon (02:01:36)</p>
                 <p><span class="year">2017 </span>Telekom Vivicitta half marathon (01:56:46)</p> 
                 <p><span class="year">2017 </span>EU13, 13th anniversary run of EU membership - 13 km (01:07:54)</p>   
@@ -126,7 +121,7 @@
                 <dl class="acc-block">
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow turn">> </span><span class="curl">{ </span>Citadell Securities <span class="dots hide">...</span></a>
+                        <a class="acc-title"><img class="arrow turn" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Citadell Securities <span class="dots hide">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content">
                         <h4>Software Engineer</h4>
@@ -135,7 +130,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Vice President Software Engineer</h4>
@@ -145,7 +140,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Morgan Stanley <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Associate Software Engineer</h4>
@@ -155,7 +150,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Strusoft Ltd. <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Strusoft Ltd. <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Software Engineer</h4>
@@ -165,7 +160,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Department of Structural Mechanics</h4>
@@ -177,7 +172,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>GE Healthcare <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>GE Healthcare <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Öveges PhD fellowship</h4>
@@ -187,7 +182,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Főmterv Zrt. <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Főmterv Zrt. <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>Civil Engineer</h4>
@@ -209,7 +204,7 @@
                 <dl class="acc-block">
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow turn">> </span><span class="curl">{ </span>Budapest University of Technology and Economics, Department of Structural Mechanics <span class="dots hide">...</span></a>
+                        <a class="acc-title"><img class="arrow turn" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Budapest University of Technology and Economics, Department of Structural Mechanics <span class="dots hide">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content">
                         <h4>PhD absolutory</h4>
@@ -219,7 +214,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Budapest University of Technology and Economics <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>MSc</h4>
@@ -229,7 +224,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Diploma on Software Administrator <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Diploma on Software Administrator <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <!-- <h4></h4> -->
@@ -238,7 +233,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>Vörösmarty Mihály Gymnasium <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>Vörösmarty Mihály Gymnasium <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <h4>specialized in Mathematics and Physics</h4>
@@ -247,7 +242,7 @@
                     <div class="curl2">}</div>
                     <!--  -->
                     <!-- <dt> -->
-                        <a class="acc-title"><span class="arrow">> </span><span class="curl">{ </span>BTF, Gyakorló Általános Iskola <span class="dots">...</span></a>
+                        <a class="acc-title"><img class="arrow" src="/assets/images/white-arrow.png" alt="" width="14" height="12"><span class="curl">{ </span>BTF, Gyakorló Általános Iskola <span class="dots">...</span></a>
                     <!-- </dt> -->
                     <dd class="acc-content hide">
                         <p class="year">1986-1994</p>  
