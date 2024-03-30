@@ -35,15 +35,10 @@
             .selected {
                 background-color: $main-color;
             }
-            // .work {
-            //     background-color: $main-color;
-            //     // color: $yellow;
-            // }
         }
     }
     .work-container, .education-container {
-        // display: block;
-        // border: 2px solid green;
+
         .acc-block {
             margin-left: 2em;
             @include breakpoint-up('medium') {
@@ -63,9 +58,6 @@
             }
             .arrow {
                 margin-right: .7em;
-                // color: $bright-gray;
-                // font-weight: 400;
-                // font-size: 1.1em;
             }
             .acc-title {
                 color: $vivid-blue;
@@ -111,24 +103,13 @@
 
     }
     .publications-container {
-
-        // border-top: 1px solid $light-gray;
-        // border-bottom: 1px solid $light-gray;
-        .article__list {
-            
+        .article__list {         
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
-                list-style: none;
-                // text-decoration: none;
-                // border: 1px solid yellow;
-                
-            
+                list-style: none;           
             .article__el {
-                // text-decoration: none;
                 margin-bottom: 2em;
-                // border: 1px solid green;
-                // height: 2em;
                 padding-top: .5em;
                 padding-bottom: .5em;
                 &:hover {
@@ -141,5 +122,4 @@
             }
         }
     }
-
 }
