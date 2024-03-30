@@ -1,3 +1,5 @@
+@use '../utils' as u;
+
 .technologies {
     &__container {
         min-height: 10em;

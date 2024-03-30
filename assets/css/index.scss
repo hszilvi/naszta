@@ -9,12 +9,5 @@
 //     font-variation-settings:
 //       "wdth" 100;
 //   }
-@import "variables";
-@import "mixins";
-@import "globals";
-@import "header";
-@import "hero";
-@import "technologies";
-@import "experiences";
-@import "footer";
-
+@forward 'globals';
+@forward 'layout';
