@@ -11,6 +11,7 @@
             padding: 0;
             margin-left: 1em;
             margin-bottom: 2em;
+            flex-wrap: wrap;
             @include breakpoint-up('medium') {
                 margin-left: 4.5em;
             }
