@@ -1,4 +1,4 @@
-@use '../utils' as u;
+@use '../utils/variables';
 
 .experience-container {
     border: 1px solid $light-gray;
@@ -29,7 +29,7 @@
                 }
                 cursor: pointer;
                 &:hover {
-                    background-color: $main-color;
+                    background-color: variables.$main-color;
                     color: $yellow;
                 }
             }
