@@ -1,20 +1,9 @@
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-// .noto-sans mono-<uniquifier> {
-//     font-family: "Noto Sans Mono", monospace;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-//     font-variation-settings:
-//       "wdth" 100;
-//   }
-@import "variables";
-@import "mixins";
-@import "globals";
-@import "header";
-@import "hero";
-@import "technologies";
-@import "experiences";
-@import "footer";
-
+@use "variables" as *;
+@use "mixins" as *;
+@use "globals";
+@use "header";
+@use "hero";
+@use "technologies";
+@use "experiences";
+@use "footer";
+@use "cookie";

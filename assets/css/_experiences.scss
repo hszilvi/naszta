@@ -1,5 +1,7 @@
+@use "variables";
+@use "mixins" as *;
 .experience-container {
-    border: 1px solid $light-gray;
+    border: 1px solid variables.$light-gray;
     padding-bottom: 2em;
     .experience-nav-container {
         .exp-nav-elements {
@@ -9,46 +11,40 @@
             padding: 0;
             margin-left: 1em;
             margin-bottom: 2em;
-            @include breakpoint-up('medium') {
+            @include breakpoint-up(medium) {
                 margin-left: 4.5em;
             }
             .exp-nav-el {
                 margin-right: 0.1em;
-                background-color: $light-gray;
+                background-color: variables.$light-gray;
                 padding-right: 2em;
                 padding-left: .5em;
                 padding-top: .5em;
                 padding-bottom: .5em;
                 font-weight: 400;
                 font-size: .7em;
-                @include breakpoint-up('medium'){
+                cursor: pointer;
+                @include breakpoint-up(medium){
                     font-size: 1em;
                 }
-                cursor: pointer;
                 &:hover {
-                    background-color: $main-color;
-                    color: $yellow;
+                    background-color: variables.$main-color;
+                    color: variables.$yellow;
                 }
             }
             .selected {
-                background-color: $main-color;
+                background-color: variables.$main-color;
             }
-            // .work {
-            //     background-color: $main-color;
-            //     // color: $yellow;
-            // }
         }
     }
     .work-container, .education-container {
-        // display: block;
-        // border: 2px solid green;
         .acc-block {
             margin-left: 2em;
-            @include breakpoint-up('medium') {
+            @include breakpoint-up(medium) {
                 margin-left: 4.5em;
             }
             .curl, .curl2 {
-                color: $yellow;
+                color: variables.$yellow;
                 font-weight: 400;
             }
             .curl2 {
@@ -56,17 +52,14 @@
                 margin-left: 1.7em;
             }
             .dots {
-                color: $bright-gray;
+                color: variables.$bright-gray;
                 font-weight: 200;
             }
             .arrow {
                 margin-right: .7em;
-                // color: $bright-gray;
-                // font-weight: 400;
-                // font-size: 1.1em;
             }
             .acc-title {
-                color: $vivid-blue;
+                color: variables.$vivid-blue;
                 font-weight: 200;
                 cursor: pointer;
             }
@@ -76,9 +69,8 @@
                     margin-bottom: 1em;
                     font-weight: 300;
                 }
-
                 .acc-descr {
-                    color: $yellow;
+                    color: variables.$yellow;
                     line-height: 1.1em;
                     margin-top: 0;
                 }
@@ -93,51 +85,39 @@
             margin-left: 2em;
             display: flex;
             flex-direction: column;
-            @include breakpoint-up('medium') {
+            @include breakpoint-up(medium) {
                 margin-left: 4.5em;
             }
             .cert-acc-title {
                 margin-bottom: 1em;
-                color: $vivid-blue;
+                color: variables.$vivid-blue;
                 font-weight: 200;
                 .curl {
-                    color: $yellow;
+                    color: variables.$yellow;
                     font-weight: 200;
                 }
             }
         }
-
     }
     .publications-container {
-
-        // border-top: 1px solid $light-gray;
-        // border-bottom: 1px solid $light-gray;
         .article__list {
             
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
                 list-style: none;
-                // text-decoration: none;
-                // border: 1px solid yellow;
-                
-            
             .article__el {
-                // text-decoration: none;
                 margin-bottom: 2em;
-                // border: 1px solid green;
-                // height: 2em;
                 padding-top: .5em;
                 padding-bottom: .5em;
                 &:hover {
-                    background-color: $lighter-gray;
+                    background-color: variables.$lighter-gray;
                 }
                 a {
                     text-decoration: none;
-                    color: $main-font-white;
+                    color: variables.$main-font-white;
                 }
             }
         }
     }
-
 }

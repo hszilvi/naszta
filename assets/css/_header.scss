@@ -1,6 +1,8 @@
+@use "variables";
+@use "mixins" as *;
 .topnav {
     height: 3em;
-    background-color: $light-gray;
+    background-color: variables.$light-gray;
     display: flex;
     justify-content: space-between;
     margin-left: auto;
@@ -15,7 +17,7 @@
         float: left;
         margin-left: 1em;
         padding-top: .1em;
-        @include breakpoint-up('medium') {
+        @include breakpoint-up(medium) {
             margin-left: 3em;
         }
     }
@@ -24,7 +26,7 @@
         border: none;
         margin-top: .7em;
         margin-right: 2em;
-        @include breakpoint-up('medium'){
+        @include breakpoint-up(medium){
             display: none;
         }
     }
@@ -39,10 +41,10 @@
         margin-block-end: 8em;
     }
     &__menu {
-        @include breakpoint-down('medium') {
+        @include breakpoint-down(medium) {
             position: fixed;
             inset: 0;
-            background-color: $light-gray;
+            background-color: variables.$light-gray;
             translate: 100vw 0;
             transition: translate 0.5s ease-in-out;
         }
@@ -51,10 +53,10 @@
         display: flex;
         align-items: center;
         gap: 2em;            
-        color: $main-font-white;
+        color: variables.$main-font-white;
         margin: 0;
         padding: 0 3em 0 0;
-        @include breakpoint-down('medium') {
+        @include breakpoint-down(medium) {
             flex-direction: column;
         }       
     }
@@ -64,11 +66,11 @@
         padding: 0.8em;
         cursor: pointer;
         &:hover {
-            background-color: $main-color;
+            background-color: variables.$main-color;
         }
     }
     &__link {
-        color: $main-font-white;
+        color: variables.$main-font-white;
         text-decoration: none;
     }
 }       

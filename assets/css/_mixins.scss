@@ -1,16 +1,25 @@
-// 640px, 1024px, 1400px
-$breakpoints-up: ("medium": 64em);
-// 639px, 1023px, 1399px
-$breakpoints-down: ("small": 53.9375em, "medium": 63.999em, "large": 87.4375em);
 
-@mixin breakpoint-up($size){
-    @media (min-width: map-get($breakpoints-up, $size)){
-        @content;
-    }
+@use "sass:map";
+$breakpoints-up: (
+  "medium": 64em
+);
+
+$breakpoints-down: (
+  "small": 53.9375em,
+  "medium": 63.999em,
+  "large": 87.4375em
+);
+
+// breakpoint-up
+@mixin breakpoint-up($size) {
+  @media (min-width: #{map.get($breakpoints-up, $size)}) {
+    @content;
+  }
 }
 
-@mixin breakpoint-down($size){
-   @media (max-width: map-get($breakpoints-down, $size)){
-       @content;
-    }
+// breakpoint-down
+@mixin breakpoint-down($size) {
+  @media (max-width: #{map.get($breakpoints-down, $size)}) {
+    @content;
+  }
 }

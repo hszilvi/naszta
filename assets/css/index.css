@@ -224,7 +224,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100%;
 }
 .technologies__el {
   width: 8em;
@@ -379,27 +379,31 @@ main {
 
 footer {
   margin-bottom: 3em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "social social" "contact contact" "copy copy";
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+footer h2 {
+  margin-left: 1em;
+  margin-bottom: 2em;
 }
 @media (min-width: 64em) {
-  footer {
-    grid-template-areas: "social contact" "copy copy";
-    min-width: 55em;
+  footer h2 {
+    margin-left: 3em;
   }
+}
+footer .curl3 {
+  color: #F0DB4F;
+}
+footer .footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 footer .socials-block {
   display: flex;
-  flex-direction: row;
-  grid-area: social;
+  justify-content: center;
   justify-self: center;
-}
-@media (min-width: 64em) {
-  footer .socials-block {
-    margin-top: 3em;
-  }
 }
 footer .socials-block .social-logo {
   margin: 1em;
@@ -408,54 +412,67 @@ footer .socials-block .social-logo {
   cursor: pointer;
 }
 footer .socials-block .social-logo img {
+  transition: 0.8s;
   width: 2.5em;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-footer .contact-form {
-  min-width: 22em;
-  max-width: 44em;
-  grid-area: contact;
+footer .socials-block .social-logo:hover {
+  transform: translate(0, 0.2em);
+}
+footer .copy {
+  margin: auto;
   justify-self: center;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
-footer .contact-form .form-container {
+footer .designby {
+  margin: 1em auto;
+  align-self: center;
+  height: 2em;
   display: flex;
-  flex-direction: column;
-  margin-left: 2em;
-  margin-right: 2em;
+  align-items: center;
+  flex-direction: row;
+  gap: 1em;
 }
-footer .contact-form .form-container label {
-  margin-bottom: 0.3em;
-  margin-top: 1.2em;
+footer .designby .bytealogo {
+  height: 2em;
 }
-footer .contact-form .form-container #name, footer .contact-form .form-container #email {
-  height: 3em;
+footer .designby .bytealogo img {
+  height: 100%;
 }
-footer .contact-form .form-container #subject {
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 4em;
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  color: white;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  z-index: 1000;
+  border: 2px solid #F0DB4F;
 }
-footer .contact-form .form-container .error {
+#cookie-banner p {
   margin: 0;
-  color: red;
-  font-weight: 600;
-  font-size: 0.8em;
+  padding-right: 1em;
 }
-footer .contact-form .form-container #submit-btn {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  height: 3em;
+#cookie-banner button {
   background-color: #F0DB4F;
-  border-radius: 0.5em;
-  font-size: 1.1em;
+  color: #121212;
   border: none;
+  padding: 0.5em 1em;
   cursor: pointer;
   font-weight: 600;
 }
-footer .copy {
-  grid-area: copy;
-  justify-self: center;
-  margin-top: 3em;
-}/*# sourceMappingURL=index.css.map */
+#cookie-banner button:hover {
+  background-color: #121212;
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

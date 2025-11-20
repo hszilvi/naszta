@@ -1,3 +1,5 @@
+@use "variables";
+@use "mixins" as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 html {
     font-size: 100%;
@@ -12,17 +14,14 @@ body {
     margin: 0 auto;
     padding: 0;
     line-height: 1.3;
-    background-color: $main-color;
+    background-color: variables.$main-color;
     max-width: 90em;
     min-width: 10em;
-    // border: 2px solid red;
-    color: $main-font-white;
+    color: variables.$main-font-white;
     font-family: "Noto Sans Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
-    // font-variation-settings:
-    //   "wdth" 100;
     height: 100vh;
 
 }
@@ -30,12 +29,12 @@ main {
     margin-block-start: 3em;
 }
 .hide-for-desktop {
-    @include breakpoint-up('medium') {
+    @include breakpoint-up(medium) {
         display: none;
     }
 }
 .hide-for-mobile {
-    @include breakpoint-down('medium') {
+    @include breakpoint-down(medium) {
         display: none;
     }
 }
@@ -43,10 +42,10 @@ main {
     display: none;
 }
 .change-bg-color-dark {
-    background-color: $main-color;
+    background-color: variables.$main-color;
 }
 .change-bg-color-light {
-    background-color: $light-gray;
+    background-color: variables.$light-gray;
 }
 .turn {
     transform: rotateZ(90deg);

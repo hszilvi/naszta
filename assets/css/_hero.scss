@@ -1,28 +1,26 @@
+@use "variables";
+@use "mixins" as *;
 .hero {
-    // border: 1px solid green;
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
-    // margin-bottom: 3em;
     margin-block-start: 5em;
     margin-block-end: 2em;
-    @include breakpoint-up('medium') {
+    @include breakpoint-up(medium) {
         flex-direction: row;
     }
     .welcome {
         width: 50%;
-        @include breakpoint-up('medium') {
+        @include breakpoint-up(medium) {
             padding-left: 3em;
-
         }
         .name {
             h1 {
                 font-size: 2em;
             }
-
         }
         .titulus {
             .titulus-el {
@@ -37,11 +35,10 @@
                 h2{
                     font-size: 1.5em;
                     font-weight: 200;
-                    color: $yellow;
+                    color: variables.$yellow;
                 }
                 p {
-                    color: $vivid-blue;
-                
+                    color: variables.$vivid-blue;
                 }
             }
         }
@@ -53,15 +50,14 @@
         }
         p{
             width: 100%;
-            background-color: $lighter-gray;
-            // height: 2em;
-            border-bottom: 2px solid $vivid-blue;
+            background-color: variables.$lighter-gray;
+            border-bottom: 2px solid variables.$vivid-blue;
             border-radius: .2em;
             padding-top: 0.1em;
             font-size: .8em;
         }
         .year {
-            color: $vivid-blue;
+            color: variables.$vivid-blue;
         }
     }
 }

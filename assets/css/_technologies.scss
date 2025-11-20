@@ -1,17 +1,19 @@
+@use "variables";
+@use "mixins" as *;
 .technologies {
     &__container {
         min-height: 10em;
-        border-bottom: 1px solid $light-gray;
+        border-bottom: 1px solid variables.$light-gray;
         margin-bottom: 2em;
         h2 {
             margin-left: 1em;
             margin-bottom: 2em;
-            @include breakpoint-up('medium') {
+            @include breakpoint-up(medium) {
                 margin-left: 3em;
             }
         }
         .curl {
-            color: $yellow;
+            color: variables.$yellow;
         }
     }
     &__list {
@@ -24,7 +26,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 90%;
+        width: 100%;
         
     }
     &__el {
@@ -43,7 +45,7 @@
                 15% { transform: skewX(15deg); }
                 20% { transform: skewX(0deg); }
                 100% { transform: skewX(0deg); }
-               }
+            }
         }
     }
 }

@@ -74,36 +74,6 @@ media.addEventListener('change', function (e) {
         })
     }
 
-
-const validateEmail = (email) => {
-    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const input = document.querySelector(email);
-    const errorMesg = input.nextElementSibling;
-    if (!regex.test(input.value)) {
-        errorMesg.classList.remove('hide');
-    } else {
-        errorMesg.classList.add('hide')
-    }
-    
-}
-const validateInput = (data) => {
-    const input = document.querySelector(data);
-    const errorMesg = input.nextElementSibling;
-    const isEmpty = input.value.trim() === '';
-    if (isEmpty) {
-        errorMesg.classList.remove('hide');
-    } else {
-        errorMesg.classList.add('hide')
-    }
-}
-submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    validateInput('#name');
-    validateEmail('#email');
-    validateInput('#subject')
-})
-
-
 for (let i = 0; i < openAccBtn.length; i++) {
     openAccBtn[i].addEventListener('click', (e) => {
         let panel = e.currentTarget.nextElementSibling;
