@@ -264,46 +264,55 @@
         <button id="cookie-accept">Accept</button>
     </div>
 <script>
-    function setWithExpiry(key, value, ttl) {
-        const now = new Date();
-        const item = {
-            value: value,
-            expiry: now.getTime() + ttl,
-        }
-        localStorage.setItem(key, JSON.stringify(item));
-    }
+    const cookieBanner = document.querySelector('#cookie-banner');
+const cookieSubmitBtn = document.querySelector('#cookie-accept');
 
-    function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key);
-        if (!itemStr) return null;
-            const item = JSON.parse(itemStr);
-            const now = new Date();
-        if (now.getTime() > item.expiry) {
-            localStorage.removeItem(key);
-            return null;
-        }
-        return item.value;
+// --- COOKIE FUNCTIONS ---
+function setCookie(cName, cValue, expdays) {
+    const date = new Date();
+    date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = `${cName}=${cValue}; ${expires}; path=/`;
+}
+
+function getCookie(cName) {
+    const name = cName + "=";
+    const decoded = decodeURIComponent(document.cookie);
+    const arr = decoded.split("; ");
+    for (let val of arr) {
+        if (val.indexOf(name) === 0) return val.substring(name.length);
     }
-  const thirtyDays = 30 * 24 * 60 * 60 * 1000;
-    if (!getWithExpiry('cookiesAccepted')) {
-        document.getElementById('cookie-banner').style.display = 'flex';
+    return null;
+}
+
+function loadGoogleAnalytics() {
+    // GA4 example – replace G-XXXXXXX with your Measurement ID
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+}
+
+cookieSubmitBtn.addEventListener('click', () => {
+    cookieBanner.style.display = 'none';
+    setCookie('cookieConsent', 'accepted', 30);
+    loadGoogleAnalytics();
+});
+
+function cookieMessage() {
+    if (!getCookie('cookieConsent')) {
+        cookieBanner.style.display = 'block';
     } else {
         loadGoogleAnalytics();
     }
-    document.getElementById('cookie-accept').addEventListener('click', function() {
-        setWithExpiry('cookiesAccepted', 'true', thirtyDays);
-        document.getElementById('cookie-banner').style.display = 'none';
-        loadGoogleAnalytics();
-    });
-    function loadGoogleAnalytics() {
-    // Replace UA-XXXXX-Y with your actual tracking ID
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview');
-    }
+}
+
+window.addEventListener('load', cookieMessage);
 </script>
 
 
