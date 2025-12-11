@@ -4,29 +4,41 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: variables.$main-color;
-    color: variables.$main-font-white;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4em;
+    display: none;
     z-index: 1000;
     border: 2px solid variables.$yellow;
-    p {
-        margin: 0;
-        padding-right: 1em;
-    }
-    button {
-        background-color: variables.$yellow;
-        color: variables.$main-color;
-        border: none;
-        padding: 0.5em 1em;
-        cursor: pointer;
-        font-weight: 600;
-        &:hover {
-            background-color: variables.$main-color;
-            color: variables.$main-font-white;
+    .cookie-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        gap: 4em;
+        background-color: variables.$main-color;
+        color: variables.$main-font-white;
+        padding: 1em;
+        p {
+            margin: 0;
+            padding-right: 1em;
+            a {
+                color: variables.$yellow;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
+        button {
+            background-color: variables.$yellow;
+            color: variables.$main-color;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-weight: 600;
+            &:hover {
+                background-color: variables.$main-color;
+                color: variables.$main-font-white;
+            }
+        }
+
+
     }
 }

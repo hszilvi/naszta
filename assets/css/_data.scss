@@ -1,0 +1,30 @@
+@use "variables";
+.data-site {
+    margin: 0 auto;
+    padding-inline: 2em;
+    .data-btn {
+        width: 6em;
+        height: 3em;
+        background-color: variables.$yellow;
+        margin-top: 2em;
+        padding-inline: 1em;
+        border: none;
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            &:hover {
+                color: white;
+            }
+        }
+        &:hover {
+            background-color: variables.$main-color;
+            color: variables.$main-font-white;
+        }
+    }
+    .data-content {
+        padding-bottom: 4em;
+    }
+
+
+
+}

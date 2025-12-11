@@ -255,19 +255,24 @@
             <div class="copy">&copy; <span id="today"></span> Ferenc Nasztanovics</div>
             <div class="designby">
                 <div>design by </div>
-                <div class="bytealogo"><a href=""><img src="./assets/images/bytealogo.png" alt=""></a></div>
+                <div class="bytealogo"><a href="https://bytea.hu/"><img src="./assets/images/bytealogo.png" alt=""></a></div>
             </div>
         </div>
     </footer>
     <div id="cookie-banner">
-        <p>🍪 This website uses cookies to collect anonymous data via Google Analytics. By continuing to browse, you agree to our use of cookies.</p>
-        <button id="cookie-accept">Accept</button>
+        <div class="cookie-content">
+            <p>🍪 This website uses cookies to collect anonymous data via Google Analytics. By continuing to browse, you agree to our use of cookies. <a href="/cookiepolicy.html" target="_blank">Read Data Management Policy.</a></p>
+            <button id="cookie-accept">Accept</button>
+        </div>
+
     </div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KBP4WHMR2"></script>
 <script>
-    const cookieBanner = document.querySelector('#cookie-banner');
+
+
+const cookieBanner = document.querySelector('#cookie-banner');
 const cookieSubmitBtn = document.querySelector('#cookie-accept');
 
-// --- COOKIE FUNCTIONS ---
 function setCookie(cName, cValue, expdays) {
     const date = new Date();
     date.setTime(date.getTime() + (expdays * 24 * 60 * 60 * 1000));
@@ -279,43 +284,44 @@ function getCookie(cName) {
     const name = cName + "=";
     const decoded = decodeURIComponent(document.cookie);
     const arr = decoded.split("; ");
-    for (let val of arr) {
-        if (val.indexOf(name) === 0) return val.substring(name.length);
-    }
-    return null;
+    let value;
+    arr.forEach(val => {
+        if(val.indexOf(name) === 0) value = val.substring(name.length);
+    })
+    return value;
 }
 
 function loadGoogleAnalytics() {
-    // GA4 example – replace G-XXXXXXX with your Measurement ID
+    if (window.gtagLoaded) return;
+    window.gtagLoaded = true;
     const gaScript = document.createElement("script");
     gaScript.async = true;
-    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9KBP4WHMR2";
     document.head.appendChild(gaScript);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
+    gtag('config', 'G-9KBP4WHMR2');
 }
 
 cookieSubmitBtn.addEventListener('click', () => {
     cookieBanner.style.display = 'none';
-    setCookie('cookieConsent', 'accepted', 30);
+    setCookie('cookie', true, 30);
     loadGoogleAnalytics();
 });
 
 function cookieMessage() {
-    if (!getCookie('cookieConsent')) {
+    if (!getCookie('cookie')) 
+    {
         cookieBanner.style.display = 'block';
-    } else {
+    } else {     
         loadGoogleAnalytics();
     }
 }
-
 window.addEventListener('load', cookieMessage);
 </script>
-
-
 <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>

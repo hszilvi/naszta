@@ -448,21 +448,31 @@ footer .designby .bytealogo img {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #121212;
-  color: white;
-  padding: 1em;
+  display: none;
+  z-index: 1000;
+  border: 2px solid #F0DB4F;
+}
+#cookie-banner .cookie-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4em;
-  z-index: 1000;
-  border: 2px solid #F0DB4F;
+  background-color: #121212;
+  color: white;
+  padding: 1em;
 }
-#cookie-banner p {
+#cookie-banner .cookie-content p {
   margin: 0;
   padding-right: 1em;
 }
-#cookie-banner button {
+#cookie-banner .cookie-content p a {
+  color: #F0DB4F;
+  text-decoration: none;
+}
+#cookie-banner .cookie-content p a:hover {
+  text-decoration: underline;
+}
+#cookie-banner .cookie-content button {
   background-color: #F0DB4F;
   color: #121212;
   border: none;
@@ -470,9 +480,36 @@ footer .designby .bytealogo img {
   cursor: pointer;
   font-weight: 600;
 }
-#cookie-banner button:hover {
+#cookie-banner .cookie-content button:hover {
   background-color: #121212;
   color: white;
+}
+
+.data-site {
+  margin: 0 auto;
+  padding-inline: 2em;
+}
+.data-site .data-btn {
+  width: 6em;
+  height: 3em;
+  background-color: #F0DB4F;
+  margin-top: 2em;
+  padding-inline: 1em;
+  border: none;
+}
+.data-site .data-btn a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.data-site .data-btn a:hover {
+  color: white;
+}
+.data-site .data-btn:hover {
+  background-color: #121212;
+  color: white;
+}
+.data-site .data-content {
+  padding-bottom: 4em;
 }
 
 /*# sourceMappingURL=index.css.map */
